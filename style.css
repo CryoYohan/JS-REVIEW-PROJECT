@@ -44,7 +44,7 @@ button{
     background-color: #28a745;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 11px;
     cursor: pointer;
 }
 
@@ -55,10 +55,17 @@ button:hover {
 .todo-item {
     display: flex;
     justify-content: space-between;
+    transition: opacity 1s ease-out;
+    opacity: 1;
+    margin-bottom: 10px; /* Add spacing between todo items */
+}
+
+.todo-item.fading {
+    opacity: 0;
 }
 
 .todo-item:last-child {
-    border-bottom: none;
+    margin-bottom: 0; /* Remove spacing for the last item */
 }
 
 .todo-item span {
@@ -68,6 +75,7 @@ button:hover {
 
 .todo-item button {
     padding: 5px 10px;
+    margin-right: 10px;
     background-color: #dc3545;
     color: #fff;
     border: none;
